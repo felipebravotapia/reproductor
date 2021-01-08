@@ -1,6 +1,7 @@
 package com.felipebravo.reproductor;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 import androidx.room.Room;
 
 import android.app.ActivityOptions;
@@ -53,16 +54,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.TimeZone;
 
 import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
 import uk.co.samuelwall.materialtaptargetprompt.extras.backgrounds.RectanglePromptBackground;
@@ -72,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
 
     Animation atg, atgtwo, cardAmin;
     ImageView logo, bg, imageViewListLikeSong;
-    LinearLayout viewList, llbtn, viewAlbum, searchLl;
-    TextView textView, nameSong, nameBand,date;
+    LinearLayout viewList, viewAlbum, searchLl;
+    TextView textView, nameSong, nameBand, date;
     FloatingActionButton btnLike, btnListPlayers;
 
     private BroadcastReceiver mNetworkReceiver;
@@ -104,13 +100,11 @@ public class MainActivity extends AppCompatActivity {
         db = Room.databaseBuilder(getApplicationContext(),
                 DatabaseClass.class, "myDatabase").allowMainThreadQueries().build();
 
-        tv_check_connection=(TextView) findViewById(R.id.tv_check_connection);
+        tv_check_connection = (TextView) findViewById(R.id.tv_check_connection);
         mNetworkReceiver = new NetworkChangeReceiver();
         registerNetworkBroadcastForNougat();
 
-
         Onboarding();
-
 
         imageView = (NetworkImageView) findViewById(R.id.imageView);
         viewAlbum = findViewById(R.id.viewAlbum);
@@ -137,16 +131,11 @@ public class MainActivity extends AppCompatActivity {
         final EditText edittext = (EditText) findViewById(R.id.searchSong);
         edittext.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                // If the event is a key-down event on the "enter" button
                 if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
                         (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                    // Perform action on key press
                     Toast.makeText(MainActivity.this, edittext.getText(), Toast.LENGTH_SHORT).show();
-
                     getDataResponse(edittext.getText().toString());
-
                     viewAlbum.setVisibility(View.GONE);
-
                     return true;
                 }
                 return false;
@@ -159,8 +148,7 @@ public class MainActivity extends AppCompatActivity {
 
         searchLl.startAnimation(atg);
 
-
-/*       llbtn = findViewById(R.id.btn);
+        /* llbtn = findViewById(R.id.btn);
 
         llbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -169,9 +157,9 @@ public class MainActivity extends AppCompatActivity {
                 //intent.putExtra(EXTRA_MESSAGE, message);
                 startActivity(intent);
             }
-        });*/
+        });
 
-// bg = findViewById(R.id.disc);
+        bg = findViewById(R.id.disc);*/
 
         imageViewListLikeSong.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -192,8 +180,6 @@ public class MainActivity extends AppCompatActivity {
                 listSong itemAlbum = (listSong) listView.getItemAtPosition(position);
                 Log.i("Click", "click en el elemento " + itemAlbum.getTrackName() + " de mi ListView");
 
-
-
                 btnLike.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -204,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
                         song.setSong(itemAlbum.getTrackName());
                         song.setBand(itemAlbum.getArtistName());
                         db.daoClass().addSong(song);
-                        Toast.makeText(getApplicationContext(), "Like - "+ itemAlbum.getTrackName(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Like - " + itemAlbum.getTrackName(), Toast.LENGTH_SHORT).show();
 
                     }
                 });
@@ -253,7 +239,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void Onboarding(){
+    private void Onboarding() {
         new MaterialTapTargetPrompt.Builder(MainActivity.this)
                 .setTarget(R.id.searchLl)
                 .setPrimaryText("Busca tus artistas y canciones favoritas")
@@ -262,22 +248,30 @@ public class MainActivity extends AppCompatActivity {
                 //.setIcon(R.drawable.ic_baseline_search_24)
                 .setPromptBackground(new RectanglePromptBackground())
                 .setPromptFocal(new RectanglePromptFocal())
-                .setPromptStateChangeListener(new MaterialTapTargetPrompt.PromptStateChangeListener()
-                {
+                .setPromptStateChangeListener(new MaterialTapTargetPrompt.PromptStateChangeListener() {
                     @Override
-                    public void onPromptStateChanged(MaterialTapTargetPrompt prompt, int state)
-                    {
-                        if (state == MaterialTapTargetPrompt.STATE_FOCAL_PRESSED)
-                        {
-                            // User has pressed the prompt target
+                    public void onPromptStateChanged(MaterialTapTargetPrompt prompt, int state) {
+                        if (state == MaterialTapTargetPrompt.STATE_FOCAL_PRESSED || state == MaterialTapTargetPrompt.STATE_NON_FOCAL_PRESSED) {
+                            showLikeSongsPrompt();
                         }
                     }
                 })
                 .show();
     }
 
+    public void showLikeSongsPrompt() {
+        new MaterialTapTargetPrompt.Builder(MainActivity.this)
+                .setTarget(findViewById(R.id.imageViewListLikeSong))
+                .setIcon(R.drawable.ic_baseline_queue_music_gray)
+                .setBackgroundColour(getColor(R.color.red_yellow))
+                .setPrimaryText("Lista de canciones")
+                .setSecondaryText("Lista de canciones Favoritas")
+                .setAnimationInterpolator(new FastOutSlowInInterpolator())
+                .show();
+    }
 
-    private void loadImage(String url){
+
+    private void loadImage(String url) {
         imageLoader = CustomVolleyRequest.getInstance(this.getApplicationContext())
                 .getImageLoader();
         imageLoader.get(url, ImageLoader.getImageListener(imageView,
@@ -287,8 +281,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void exoplayer(String url){
-        if(audiosource == null){
+    public void exoplayer(String url) {
+        if (audiosource == null) {
 
             playerView.setVisibility(View.VISIBLE);
             playerView.startAnimation(atg);
@@ -305,7 +299,7 @@ public class MainActivity extends AppCompatActivity {
             simpleExoPlayer.setPlayWhenReady(true);
 
 
-        }else{
+        } else {
             simpleExoPlayer.setPlayWhenReady(false);
             simpleExoPlayer.stop();
             simpleExoPlayer.seekTo(0);
@@ -319,11 +313,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private  void showComponent(){
+    private void showComponent() {
         viewList.setVisibility(View.VISIBLE);
     }
 
-    private void animation(){
+    private void animation() {
         logo.startAnimation(atg);
         viewList.startAnimation(atgtwo);
     }
@@ -331,7 +325,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void getDataResponse(String search) {
         androidSong.clear();
-        String url = "https://itunes.apple.com/search?term="+search+"&mediaType=music&limit=20";
+        String url = "https://itunes.apple.com/search?term=" + search + "&mediaType=music&limit=20";
 
         mRequestQueue = Volley.newRequestQueue(this);
         mStringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
@@ -342,7 +336,7 @@ public class MainActivity extends AppCompatActivity {
                     JSONObject obj = new JSONObject(response.toString());
                     JSONArray media = obj.getJSONArray("results");
 
-                    for(int i = 0; i < media.length(); i++){
+                    for (int i = 0; i < media.length(); i++) {
                         JSONObject url = media.getJSONObject(i);
 
                         listSong song = new listSong();
@@ -385,9 +379,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public static void dialog(boolean value){
+    public static void dialog(boolean value) {
 
-        if(value){
+        if (value) {
             tv_check_connection.setText("Conectado");
             tv_check_connection.setBackgroundColor(Color.parseColor("#4ED1C1"));
             tv_check_connection.setTextColor(Color.WHITE);
@@ -400,7 +394,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             };
             handler.postDelayed(delayrunnable, 3000);
-        }else {
+        } else {
             tv_check_connection.setVisibility(View.VISIBLE);
             tv_check_connection.setText("Sin Conexión");
             tv_check_connection.setBackgroundColor(Color.parseColor("#F0657A"));
