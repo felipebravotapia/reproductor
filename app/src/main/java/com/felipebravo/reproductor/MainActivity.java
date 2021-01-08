@@ -109,26 +109,7 @@ public class MainActivity extends AppCompatActivity {
         registerNetworkBroadcastForNougat();
 
 
-        new MaterialTapTargetPrompt.Builder(MainActivity.this)
-                .setTarget(R.id.searchLl)
-                .setPrimaryText("Busca tus artistas y canciones favoritas")
-                .setSecondaryText("Podrás escuchar lo que te guste")
-                .setBackgroundColour(getColor(R.color.red_color))
-                //.setIcon(R.drawable.ic_baseline_search_24)
-                .setPromptBackground(new RectanglePromptBackground())
-                .setPromptFocal(new RectanglePromptFocal())
-                .setPromptStateChangeListener(new MaterialTapTargetPrompt.PromptStateChangeListener()
-                {
-                    @Override
-                    public void onPromptStateChanged(MaterialTapTargetPrompt prompt, int state)
-                    {
-                        if (state == MaterialTapTargetPrompt.STATE_FOCAL_PRESSED)
-                        {
-                            // User has pressed the prompt target
-                        }
-                    }
-                })
-                .show();
+        Onboarding();
 
 
         imageView = (NetworkImageView) findViewById(R.id.imageView);
@@ -269,6 +250,30 @@ public class MainActivity extends AppCompatActivity {
                 exoplayer(itemAlbum.getMusic());
             }
         });
+    }
+
+
+    private void Onboarding(){
+        new MaterialTapTargetPrompt.Builder(MainActivity.this)
+                .setTarget(R.id.searchLl)
+                .setPrimaryText("Busca tus artistas y canciones favoritas")
+                .setSecondaryText("Podrás escuchar lo que te guste")
+                .setBackgroundColour(getColor(R.color.red_color))
+                //.setIcon(R.drawable.ic_baseline_search_24)
+                .setPromptBackground(new RectanglePromptBackground())
+                .setPromptFocal(new RectanglePromptFocal())
+                .setPromptStateChangeListener(new MaterialTapTargetPrompt.PromptStateChangeListener()
+                {
+                    @Override
+                    public void onPromptStateChanged(MaterialTapTargetPrompt prompt, int state)
+                    {
+                        if (state == MaterialTapTargetPrompt.STATE_FOCAL_PRESSED)
+                        {
+                            // User has pressed the prompt target
+                        }
+                    }
+                })
+                .show();
     }
 
 
