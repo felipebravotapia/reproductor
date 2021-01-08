@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Reproductor</string>
+    <string name="reproductor">Reproductor</string>
+    <string name="search_music">Search Music</string>
+    <string name="name_song">Name Song</string>
+    <string name="band_song">Band Song</string>
+    <string name="duration">duration</string>
+    <string name="title_activity_my_like_song">MyLikeSong</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="guardar_canci_n">Guardar Canción</string>
+</resources>
