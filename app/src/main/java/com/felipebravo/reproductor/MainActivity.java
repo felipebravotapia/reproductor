@@ -1,6 +1,7 @@
 package com.felipebravo.reproductor;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 import androidx.room.Room;
 
@@ -38,6 +39,7 @@ import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import com.felipebravo.reproductor.activities.BottomSheetFavoriteSong;
 import com.felipebravo.reproductor.activities.FavoriteSongActivity;
 import com.felipebravo.reproductor.database.DatabaseClass;
 import com.felipebravo.reproductor.entity.Song;
@@ -63,11 +65,12 @@ import java.util.Date;
 import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
 import uk.co.samuelwall.materialtaptargetprompt.extras.backgrounds.RectanglePromptBackground;
 import uk.co.samuelwall.materialtaptargetprompt.extras.focals.RectanglePromptFocal;
+import androidx.databinding.DataBindingUtil;
 
 public class MainActivity extends AppCompatActivity {
 
     Animation atg, atgtwo, cardAmin;
-    ImageView logo, bg, imageViewListLikeSong;
+    ImageView logo_bg, imageViewListLikeSong;
     LinearLayout viewList, viewAlbum, searchLl;
     TextView textView, nameSong, nameBand, date;
     FloatingActionButton btnLike, btnListPlayers;
@@ -89,10 +92,13 @@ public class MainActivity extends AppCompatActivity {
     SimpleExoPlayer simpleExoPlayer;
     DatabaseClass db;
 
+    //ActivityMainBinding bi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -109,12 +115,13 @@ public class MainActivity extends AppCompatActivity {
         imageView = (NetworkImageView) findViewById(R.id.imageView);
         viewAlbum = findViewById(R.id.viewAlbum);
         textView = findViewById(R.id.textView);
-        logo = findViewById(R.id.logo);
+        logo_bg = findViewById(R.id.logo_bg);
         viewList = findViewById(R.id.viewList);
         searchLl = findViewById(R.id.searchLl);
         playerView = findViewById(R.id.playerview);
         btnListPlayers = findViewById(R.id.imageViewPlayers);
         imageViewListLikeSong = findViewById(R.id.imageViewListLikeSong);
+
 
         nameSong = findViewById(R.id.name_song);
         nameBand = findViewById(R.id.name_group);
@@ -147,23 +154,14 @@ public class MainActivity extends AppCompatActivity {
         cardAmin = AnimationUtils.loadAnimation(this, R.anim.ancard);
 
         searchLl.startAnimation(atg);
+        logo_bg.startAnimation(atg);
 
-        /* llbtn = findViewById(R.id.btn);
-
-        llbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MusicList.class);
-                //intent.putExtra(EXTRA_MESSAGE, message);
-                startActivity(intent);
-            }
-        });
-
-        bg = findViewById(R.id.disc);*/
 
         imageViewListLikeSong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /*BottomSheetFavoriteSong bottomSheet = new BottomSheetFavoriteSong();
+                bottomSheet.show(getSupportFragmentManager(),bottomSheet.getTag());*/
                 Intent intent = new Intent(MainActivity.this, FavoriteSongActivity.class);
                 startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
             }
@@ -318,7 +316,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void animation() {
-        logo.startAnimation(atg);
         viewList.startAnimation(atgtwo);
     }
 

@@ -77,7 +77,7 @@ public class FavoriteSongActivity extends AppCompatActivity {
         }
     }
 
-    private void deleteUser() {
+/*    private void deleteUser() {
         Song song = new Song();
         song.setId(3);
         db.daoClass().deleteSong(song);
@@ -92,7 +92,7 @@ public class FavoriteSongActivity extends AppCompatActivity {
         song.setBand("Deep Purple");
         db.daoClass().updateSong(song);
         Toast.makeText(this, "Song Updated", Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
 
 }

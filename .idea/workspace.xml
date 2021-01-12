@@ -5,9 +5,27 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6099f9d8-1f3d-4d79-9b37-3451db7fec41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_queue_music_gray.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_databinding_databinding_adapters_4_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_databinding_databinding_common_4_0_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_databinding_databinding_runtime_4_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_databinding_viewbinding_4_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/felipebravo/reproductor/activities/BottomSheetFavoriteSong.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/anim_bar_hiden.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/anim_bar_show.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/f_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_cancel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_create.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_email.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_location.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_message_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_more_vert.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_phone.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_bottom_sheet_like.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -18,9 +36,18 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/felipebravo/reproductor/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/felipebravo/reproductor/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/felipebravo/reproductor/activities/FavoriteSongActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/felipebravo/reproductor/activities/FavoriteSongActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +81,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.felipebravo.reproductor.activities" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/anim" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
   </component>
@@ -160,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610114038167</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add function onBoarding Like songs">
+      <created>1610114801046</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610114801046</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -169,16 +209,37 @@
     <MESSAGE value="&#10;mod card border favorite songs" />
     <MESSAGE value="mod card border favorite songs" />
     <MESSAGE value="add function onBoarding" />
-    <option name="LAST_COMMIT_MESSAGE" value="add function onBoarding" />
+    <MESSAGE value="add function onBoarding Like songs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add function onBoarding Like songs" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="406" y="134" key="CommitChangelistDialog2" timestamp="1610114037960">
+    <state x="406" y="134" key="CommitChangelistDialog2" timestamp="1610114800672">
       <screen x="0" y="23" width="1792" height="1018" />
     </state>
-    <state x="406" y="134" key="CommitChangelistDialog2/0.23.1792.1018@0.23.1792.1018" timestamp="1610114037960" />
-    <state x="496" y="260" key="Vcs.Push.Dialog.v2" timestamp="1610114040042">
+    <state x="406" y="134" key="CommitChangelistDialog2/0.23.1792.1018@0.23.1792.1018" timestamp="1610114800672" />
+    <state width="1750" height="235" key="GridCell.Tab.0.bottom" timestamp="1610383739673">
       <screen x="0" y="23" width="1792" height="1018" />
     </state>
-    <state x="496" y="260" key="Vcs.Push.Dialog.v2/0.23.1792.1018@0.23.1792.1018" timestamp="1610114040042" />
+    <state width="1750" height="235" key="GridCell.Tab.0.bottom/0.23.1792.1018@0.23.1792.1018" timestamp="1610383739673" />
+    <state width="1750" height="235" key="GridCell.Tab.0.center" timestamp="1610383739672">
+      <screen x="0" y="23" width="1792" height="1018" />
+    </state>
+    <state width="1750" height="235" key="GridCell.Tab.0.center/0.23.1792.1018@0.23.1792.1018" timestamp="1610383739672" />
+    <state width="1750" height="235" key="GridCell.Tab.0.left" timestamp="1610383739672">
+      <screen x="0" y="23" width="1792" height="1018" />
+    </state>
+    <state width="1750" height="235" key="GridCell.Tab.0.left/0.23.1792.1018@0.23.1792.1018" timestamp="1610383739672" />
+    <state width="1750" height="235" key="GridCell.Tab.0.right" timestamp="1610383739673">
+      <screen x="0" y="23" width="1792" height="1018" />
+    </state>
+    <state width="1750" height="235" key="GridCell.Tab.0.right/0.23.1792.1018@0.23.1792.1018" timestamp="1610383739673" />
+    <state x="496" y="260" key="Vcs.Push.Dialog.v2" timestamp="1610114802806">
+      <screen x="0" y="23" width="1792" height="1018" />
+    </state>
+    <state x="496" y="260" key="Vcs.Push.Dialog.v2/0.23.1792.1018@0.23.1792.1018" timestamp="1610114802806" />
+    <state x="548" y="289" width="695" height="486" key="find.popup" timestamp="1610421215667">
+      <screen x="0" y="23" width="1792" height="1018" />
+    </state>
+    <state x="548" y="289" width="695" height="486" key="find.popup/0.23.1792.1018@0.23.1792.1018" timestamp="1610421215667" />
   </component>
 </project>

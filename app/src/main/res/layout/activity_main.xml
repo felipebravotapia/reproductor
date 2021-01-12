@@ -47,12 +47,12 @@
         app:srcCompat="@drawable/ic_baseline_queue_music_24" />
 
     <ImageView
-        android:id="@+id/logo"
+        android:id="@+id/logo_bg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="20dp"
         android:src="@drawable/disc"
@@ -65,7 +65,7 @@
     <LinearLayout
         android:id="@+id/viewList"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="420dp"
         android:orientation="vertical"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
@@ -136,11 +136,11 @@
         android:id="@+id/searchLl"
         android:layout_width="373dp"
         android:layout_height="46dp"
-        android:layout_marginVertical="450dp"
-        android:layout_marginBottom="496dp"
+        android:layout_marginVertical="470dp"
+        android:layout_marginBottom="486dp"
         android:background="@drawable/bg_search"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/logo_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -172,10 +172,10 @@
         android:layout_width="373dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_marginVertical="250dp"
-        android:layout_marginBottom="196dp"
+        android:layout_marginVertical="290dp"
+        android:layout_marginBottom="176dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/logo_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
