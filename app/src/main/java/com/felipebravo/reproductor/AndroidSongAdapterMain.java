@@ -47,18 +47,6 @@ public class AndroidSongAdapterMain extends ArrayAdapter<listSong> {
         ImageView iconView = (ImageView) listItemView.findViewById(R.id.list_item_icon);
         new DownloadImageTask().execute(new Object[] {iconView, currentAndroidSong.getImage()});
 
-
-/*
-        try {
-        Bitmap bitmap = BitmapFactory.decodeStream((InputStream) new URL(currentAndroidSong.getImage()).getContent());
-        iconView.setImageBitmap(bitmap);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-*/
-
         return listItemView;
     }
 
