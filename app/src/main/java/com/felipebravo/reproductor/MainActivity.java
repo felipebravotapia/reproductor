@@ -229,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
 
                 loadImage(itemAlbum.getImage());
                 ViewGroup.LayoutParams params = viewList.getLayoutParams();
-                params.height = 1100;
+                params.height = 1250;
                 viewList.setLayoutParams(params);
                 exoplayer(itemAlbum.getMusic());
             }
