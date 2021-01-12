@@ -1,9 +1,9 @@
 package com.felipebravo.reproductor;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 import androidx.room.Room;
+
 
 import android.app.ActivityOptions;
 import android.content.BroadcastReceiver;
@@ -40,7 +40,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import com.felipebravo.reproductor.activities.BottomSheetFavoriteSong;
-import com.felipebravo.reproductor.activities.FavoriteSongActivity;
 import com.felipebravo.reproductor.database.DatabaseClass;
 import com.felipebravo.reproductor.entity.Song;
 import com.google.android.exoplayer2.SimpleExoPlayer;
@@ -65,8 +64,6 @@ import java.util.Date;
 import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
 import uk.co.samuelwall.materialtaptargetprompt.extras.backgrounds.RectanglePromptBackground;
 import uk.co.samuelwall.materialtaptargetprompt.extras.focals.RectanglePromptFocal;
-import androidx.databinding.DataBindingUtil;
-
 public class MainActivity extends AppCompatActivity {
 
     Animation atg, atgtwo, cardAmin;
@@ -161,9 +158,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Animation anim = android.view.animation.AnimationUtils.loadAnimation(MainActivity.this,  R.anim.shakemylikes);
-                anim.setDuration(200L);
-                imageViewListLikeSong.startAnimation(anim);
+                Animation hyperspaceJump = AnimationUtils.loadAnimation(MainActivity.this, R.anim.shakemylikes);
+                imageViewListLikeSong.startAnimation(hyperspaceJump);
 
                 BottomSheetFavoriteSong bottomSheet = new BottomSheetFavoriteSong();
                 bottomSheet.show(getSupportFragmentManager(),bottomSheet.getTag());

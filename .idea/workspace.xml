@@ -9,8 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6099f9d8-1f3d-4d79-9b37-3451db7fec41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/shakemylikes.xml" afterDir="false" />
+    <list default="true" id="6099f9d8-1f3d-4d79-9b37-3451db7fec41" name="Default Changelist" comment="add anim button my likes songs">
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -19,11 +18,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/felipebravo/reproductor/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/felipebravo/reproductor/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +40,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -60,6 +64,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/anim" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/anim" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.felipebravo.reproductor.activities" />
     </key>
@@ -211,7 +218,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610424172354</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add anim button my likes songs">
+      <created>1610425332170</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1610425332170</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add anim button my likes songs">
+      <created>1610425337036</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1610425337036</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -226,17 +247,22 @@
     <MESSAGE value="new feature sheet list" />
     <MESSAGE value="feature edittext actionSearch" />
     <MESSAGE value="delete class old" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete class old" />
+    <MESSAGE value="add anim button my likes songs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add anim button my likes songs" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="634" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610423871480">
+    <state x="634" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610425906674">
       <screen x="0" y="23" width="1792" height="1018" />
     </state>
-    <state x="634" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1018@0.23.1792.1018" timestamp="1610423871480" />
-    <state x="971" y="104" key="CommitChangelistDialog2" timestamp="1610425331818">
+    <state x="634" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1018@0.23.1792.1018" timestamp="1610425906674" />
+    <state x="484" y="294" key="AndroidCreateResourceFileDialog" timestamp="1610425638443">
       <screen x="0" y="23" width="1792" height="1018" />
     </state>
-    <state x="971" y="104" key="CommitChangelistDialog2/0.23.1792.1018@0.23.1792.1018" timestamp="1610425331818" />
+    <state x="484" y="294" key="AndroidCreateResourceFileDialog/0.23.1792.1018@0.23.1792.1018" timestamp="1610425638443" />
+    <state x="971" y="104" key="CommitChangelistDialog2" timestamp="1610426020628">
+      <screen x="0" y="23" width="1792" height="1018" />
+    </state>
+    <state x="971" y="104" key="CommitChangelistDialog2/0.23.1792.1018@0.23.1792.1018" timestamp="1610426020628" />
     <state width="1750" height="235" key="GridCell.Tab.0.bottom" timestamp="1610422751760">
       <screen x="0" y="23" width="1792" height="1018" />
     </state>
@@ -253,10 +279,10 @@
       <screen x="0" y="23" width="1792" height="1018" />
     </state>
     <state width="1750" height="235" key="GridCell.Tab.0.right/0.23.1792.1018@0.23.1792.1018" timestamp="1610422751760" />
-    <state x="496" y="260" key="Vcs.Push.Dialog.v2" timestamp="1610424174438">
+    <state x="496" y="260" key="Vcs.Push.Dialog.v2" timestamp="1610425338704">
       <screen x="0" y="23" width="1792" height="1018" />
     </state>
-    <state x="496" y="260" key="Vcs.Push.Dialog.v2/0.23.1792.1018@0.23.1792.1018" timestamp="1610424174438" />
+    <state x="496" y="260" key="Vcs.Push.Dialog.v2/0.23.1792.1018@0.23.1792.1018" timestamp="1610425338704" />
     <state x="548" y="289" width="695" height="486" key="find.popup" timestamp="1610421215667">
       <screen x="0" y="23" width="1792" height="1018" />
     </state>
