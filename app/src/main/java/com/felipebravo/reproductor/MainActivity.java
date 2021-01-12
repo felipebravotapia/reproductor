@@ -160,6 +160,11 @@ public class MainActivity extends AppCompatActivity {
         imageViewListLikeSong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Animation anim = android.view.animation.AnimationUtils.loadAnimation(MainActivity.this,  R.anim.shakemylikes);
+                anim.setDuration(200L);
+                imageViewListLikeSong.startAnimation(anim);
+
                 BottomSheetFavoriteSong bottomSheet = new BottomSheetFavoriteSong();
                 bottomSheet.show(getSupportFragmentManager(),bottomSheet.getTag());
                 /*Intent intent = new Intent(MainActivity.this, FavoriteSongActivity.class);
