@@ -160,10 +160,10 @@ public class MainActivity extends AppCompatActivity {
         imageViewListLikeSong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*BottomSheetFavoriteSong bottomSheet = new BottomSheetFavoriteSong();
-                bottomSheet.show(getSupportFragmentManager(),bottomSheet.getTag());*/
-                Intent intent = new Intent(MainActivity.this, FavoriteSongActivity.class);
-                startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
+                BottomSheetFavoriteSong bottomSheet = new BottomSheetFavoriteSong();
+                bottomSheet.show(getSupportFragmentManager(),bottomSheet.getTag());
+                /*Intent intent = new Intent(MainActivity.this, FavoriteSongActivity.class);
+                startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());*/
             }
         });
 

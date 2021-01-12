@@ -1,6 +1,7 @@
 package com.felipebravo.reproductor.activities;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -12,13 +13,23 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 
 import com.felipebravo.reproductor.R;
+import com.felipebravo.reproductor.adapters.SongAdapter;
+import com.felipebravo.reproductor.database.DatabaseClass;
 import com.felipebravo.reproductor.databinding.LayoutBottomSheetLikeBinding;
+import com.felipebravo.reproductor.entity.Song;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BottomSheetFavoriteSong extends BottomSheetDialogFragment {
 
@@ -26,18 +37,21 @@ public class BottomSheetFavoriteSong extends BottomSheetDialogFragment {
     BottomSheetBehavior bottomSheetBehavior;
     LayoutBottomSheetLikeBinding bi;
     Animation barAminShow, barAminHiden;
+    DatabaseClass db;
+
+    private RecyclerView mRecyclerView;
+    public SongAdapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+    List<Song> songList;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         BottomSheetDialog bottomSheet = (BottomSheetDialog) super.onCreateDialog(savedInstanceState);
 
-        //inflating layout
         View view = View.inflate(getContext(), R.layout.layout_bottom_sheet_like, null);
 
-        //binding views to data binding.
         bi = DataBindingUtil.bind(view);
 
-        //setting layout with bottom sheet
         bottomSheet.setContentView(view);
 
         barAminShow = AnimationUtils.loadAnimation(getContext(), R.anim.anim_bar_show);
@@ -45,14 +59,9 @@ public class BottomSheetFavoriteSong extends BottomSheetDialogFragment {
 
         bottomSheetBehavior = BottomSheetBehavior.from((View) (view.getParent()));
 
-
-        //setting Peek at the 16:9 ratio keyline of its parent.
         bottomSheetBehavior.setPeekHeight(BottomSheetBehavior.PEEK_HEIGHT_AUTO);
 
-
-        //setting max height of bottom sheet
         bi.extraSpace.setMinimumHeight((Resources.getSystem().getDisplayMetrics().heightPixels) / 2);
-
 
         bottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
@@ -81,7 +90,6 @@ public class BottomSheetFavoriteSong extends BottomSheetDialogFragment {
             }
         });
 
-        //aap bar cancel button clicked
         bi.cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,28 +98,30 @@ public class BottomSheetFavoriteSong extends BottomSheetDialogFragment {
             }
         });
 
-        //aap bar edit button clicked
-        bi.editBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(), "Edit button clicked", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        //aap bar more button clicked
-        bi.moreBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(), "More button clicked", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
-        //hiding app bar at the start
         hideAppBar(bi.appBarLayout);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(getContext());
+        mRecyclerView.setLayoutManager(mLayoutManager);
 
-
+        db = Room.databaseBuilder(getContext(),
+                DatabaseClass.class, "myDatabase").allowMainThreadQueries().build();
+        getAllData();
         return bottomSheet;
+    }
+
+
+    private void getAllData() {
+        List<Song> songList = new ArrayList<>();
+        songList = db.daoClass().getSongs();
+
+        if (songList.size() > 0) {
+            mAdapter = new SongAdapter(songList);
+            mRecyclerView.setAdapter(mAdapter);
+
+        } else {
+            Toast.makeText(getContext(), "Sin canciones favoritas", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
